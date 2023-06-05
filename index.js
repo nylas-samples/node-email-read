@@ -11,7 +11,7 @@ const nylas = Nylas.with(process.env.ACCESS_TOKEN);
 
 // Read your messages
 try {
-  const messages = await nylas.messages;
+  const messages = nylas.messages;
   const messageList = await messages.list({ limit: 5 });
 
   messageList.map((message) => {
